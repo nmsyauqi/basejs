@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup.js</title>
+</head>
+<body>
+    <h1 id="001"></h1>
+    <script>
+        
+        // alert, prompt, confirm
+        salv = confirm('sambut?');
+        if (salv) {
+            var clear = false
+            while (!clear) {
+                var nome = prompt('nama');
+                if (nome === null) {
+                    alert('proses batal');
+                    break;
+                } else if (nome.trim() === "") {
+                    continue;
+                } else {
+                    clear = confirm('yakin nama adalah ' + nome + '?');
+                };
+                document.getElementById('001').innerText = 'hawo ' + nome;
+            };
+        };   
+    </script>
+</body>
+</html>
